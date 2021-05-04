@@ -38,10 +38,18 @@ def add_user():
     else:
         return not_found()
 
+
 @app.route('/users')
 def users():
     users = mongo.db.user.find()
     resp = dumps(users)
+    return resp
+
+
+@app.route('/user/<id>')
+def user(id):
+    user = mongo.db.user.find_one({'_id': ObjectId(id)})
+    resp = dumps(user)
     return resp
 
 
