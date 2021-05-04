@@ -63,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620159281853</updated>
-      <workItem from="1620159286925" duration="1473000" />
+      <workItem from="1620159286925" duration="2388000" />
     </task>
     <servers />
   </component>
@@ -82,6 +82,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flaskRestApiDemo$flaskRestApiDemo.coverage" NAME="flaskRestApiDemo Coverage Results" MODIFIED="1620160712276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flaskRestApiDemo$flaskRestApiDemo.coverage" NAME="flaskRestApiDemo Coverage Results" MODIFIED="1620162542596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

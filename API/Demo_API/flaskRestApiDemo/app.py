@@ -53,6 +53,16 @@ def user(id):
     return resp
 
 
+@app.route('/delete/<id>', methods=['DELETE'])
+def delete_user(id):
+    mongo.db.user.delete_one({'_id': ObjectId(id)})
+    resp = jsonify("User deleted succesfully")
+
+    resp.status_code = 200
+
+    return resp
+
+
 @app.errorhandler(404)
 def not_found(error=None):
     message = {
