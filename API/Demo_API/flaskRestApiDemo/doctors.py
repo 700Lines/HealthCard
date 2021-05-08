@@ -75,7 +75,7 @@ def update_doctor(id):
         resp = jsonify("Doctor updated successfully")
         return resp
     else:
-        return not_found
+        return not_found()
 
 
 if __name__ == "__main__":
