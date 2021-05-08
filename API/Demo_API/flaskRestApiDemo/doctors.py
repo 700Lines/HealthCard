@@ -44,5 +44,12 @@ def doctors():
     return resp
 
 
+@app.route('/doctor/<id>')
+def doctor(id):
+    doctor = mongo.db.doctor.find_one({'_id': ObjectId(id)})
+    resp = dumps(doctor)
+    return resp
+
+
 if __name__ == "__main__":
     app.run(debug=True)
