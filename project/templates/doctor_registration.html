@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="../assets/img/favicon.ico">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- navbar start-->
+    <div class="topnav">
+      <a class="tutorhub" >Health Card</a>
+      <a class="nav"href="/login">Login</a>
+      <a class="nav">Services</a>
+      <a class="nav">Contact Us</a>
+      <a class="nav">About Us</a>
+      <a class="nav">Home</a>
+    </div>
+
+    <br><br><br>
+   <!-- navbar end -->
+   <!-- notify the user about successfull registration -->
+
+    <!-- registration form start -->
+
+    <div  align = "center">
+    <div class = "reg-form">
+      <div align = "center">
+      <img class = "image"src="../static/images/health card logo.png" alt="">
+    </div>
+      <h4 align="center">Nothing is more Important than your health</h4>
+
+    <div align= "center" class="tab">
+      <a href="/register">Patient</a>
+      <a href="/doctor_reg">Doctor</a>
+      <a href="/pharmacy_reg">Pharmacy</a>
+    </div>
+
+
+        <input type="hidden" name="role" value="patient">
+        <form id="form" action="" method="POST">
+        {% csrf_token %}
+        <div class="input-holder" >
+          <div class="first">
+            <h5 >First Name</h5>
+          </div>
+          <div class = "first-name">
+          <input name="firstname" type="text"  id="fname">
+        </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        
+        <div align="center" class="input-holder">
+          <div class="last">
+          <h5 >Last Name</h5>
+        </div>
+          <div class = "last-name">
+          <input type="text" name="lastname"  id="lname">
+        </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div align = "center" class="input-holder">
+          <h5 class="placeholder">Email</h5>
+          <div class = "otherInfo">
+            <input name="email" type="email"  id="email">
+        </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Password</h5>
+          <div class = "otherInfo">
+            <input name="password" type="password"  id="password"> 
+          </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Confirm Password</h5>
+          <div class = "otherInfo"> 
+            <input name="conpassword" type="password"  id="password2">
+          </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+
+        <div align="center"class="input-holder">
+          <h5 class="otherPlaceholder">Age</h5>
+
+          <div class = "otherInfo"> 
+{#            <input name="date" type="date"  value="" min="1900-01-01" max="2200-12-30" id="date">#}
+              <input type="number" name="date" id="date">
+
+          </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Address</h5>
+
+          <div class = "otherInfo"> 
+            <input name="address" type="text"  id="address">
+          </div>
+         
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Contact Number</h5>
+          <div class = "otherInfo"> 
+            <input name="contact"type="tel" id="contactNo">
+          </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">NID</h5>
+          <div class = "otherInfo"> 
+            <input name="number"type="Number" id="nid">
+          </div>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div align="center" class="input-holder">
+          <input id="terms" class="terms" type="checkbox" >I have read and agree to the Terms and Conditions and Privacy Policy
+          <small>Error message</small>
+         </div>
+
+        <div align="center" class="input-holder">
+          <input class="button" type="submit" value="Sign Up" >
+        </div>
+
+        <div align = "center">
+          <a class="dont" href="login.html">Already have an account? SignIn</a>
+         </div>
+         {% for message in messages %}
+                <h3 style=" text-align: center; margin-top: 15px; color: #E91E63;">
+                {{ message }}
+                </h3>
+          {% endfor %}
+          <br><br>
+      </form>
+    </div>
+
+  </body>
+</html>

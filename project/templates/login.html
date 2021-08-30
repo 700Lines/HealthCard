@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <link rel="icon" href="../assets/img/favicon.ico">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </head>
+  <body>
+    <!-- navbar start-->
+    <div class="topnav">
+      <a class="tutorhub" >Health Card</a>
+      <a class="nav"href="/register">Register</a>
+      <a class="nav">Services</a>
+      <a class="nav">Contact Us</a>
+      <a class="nav">About Us</a>
+      <a class="nav">Home</a>
+
+    </div>
+
+    <br><br><br>
+
+
+  <br>
+
+  <div align = "center">
+  <div class = "login-form">
+  <div align = "center">
+  <img class = "image"src="../static/images/health card logo.png" alt="">
+</div>
+  <h4 align="center">Nothing is more Important than your health</h4>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla
+dictum. <br>Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p> -->
+
+<!-- login form -->
+
+         <div class="row">
+             <div class="col-md-4 offset-md-4">
+                 <form action="" method="POST">
+                  {% csrf_token %}
+
+                    <div align="center"  class="input-holder">
+                       <!-- <i class="icon far fa-user"></i> -->
+                       <h5 class="otherPlaceholder">User Name or Email</h5>
+                       <div class = "otherInfo">
+                       <input name="username" type="text">
+                     </div>
+                     </div>
+
+                     <div align="center" class="input-holder">
+                       <!-- <i class="icon fas fa-lock"></i> -->
+                       <h5 class = "pass">Password</h5>
+                       <input name="password" type="password">
+                     </div>
+                     <a class="forgot" href="#">Forget Password?</a>
+                     <div  class="input-holder">
+                     
+                       <div align = "center">
+                       <input  class="login-button" name="submit" type="submit" value="Log In">
+                      </div>
+                      {% for message in messages %}
+                          <h3 style=" text-align: center; margin-top: 15px; color: #E91E63;">
+                          {{ message }}
+                          </h3>
+                      {% endfor %}
+                       <div align = "center">
+                       <a class="dont" href="patientReg.html">Don't have account? SignUp</a>
+                      </div>
+                     </div>
+                 </form>
+             </div>
+         </div>
+   
+        </div>
+      </div>
+  </body>
+</html>
+

@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'css/patientsPrescription.css' %}">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="../static/images/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Patients Details Starts************ -->
+      <div class="prescription-header">
+        <div class="print-button">
+          <button><a href="allPrescription.html">
+              <img src="../static/images/back-button.png" alt="Submit Form">
+            </a>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="full-form">
+        <div class="jumbotron">
+          <div class="headline">
+            <img src="../static/images/health-card_prescription.png" alt="" srcset="">
+            <div class="doctor-details">
+              <h6 class="display-4">{{ prescription.doctor.first_name }}</h6>
+              <p class="lead">M.B.B.S M.S.</p>
+              <p class="lead">F.R.C.S. (Bakingham)</p>
+              <p class="lead">F.R.C.S. (Glosgo)</p>
+              <p class="lead">M.ch (Neuro Sergeon)</p>
+            </div>
+          </div>
+          <hr class="my-4">
+          <form>
+
+            <div class="form-group row">
+              <label for="inputEmail4" class="col-form-label">Name:</label>
+              <div class="input col-lg-3 col-sm-3">
+                <!-- <input type="text" class="form-control" placeholder="Name"> -->
+                <h6>{{ prescription.patient.first_name }}</h6>
+              </div>
+              <label for="exampleFormControlSelect1" class="col-form-label">Gender: </label>
+              <div class="input col-lg-3 col-sm-3">
+                <h6>{{ prescription.gender }}</h6>
+                <!-- <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select> -->
+              </div>
+              <label for="inputEmail4" class="col-form-label">Phone:</label>
+              <div class="input col-lg-3 col-sm-3">
+                <h6>{{ prescription.patient.contact_number }}</h6>
+                <!-- <input type="text" class="form-control" placeholder="Gender"> -->
+              </div>
+            </div>
+
+            <br>
+            <div class="form-group row">
+              <label for="inputEmail4" class=" col-form-label level-age">Age:</label>
+              <div class="input col-lg-3 col-sm-3">
+                <h6>{{ prescription.patient.age }}</h6>
+                <!-- <input type="text" class="form-control" placeholder="Name"> -->
+              </div>
+              <label for="inputEmail4" class="col-form-label level-id">Id: </label>
+              <div class="input col-lg-3 col-sm-3">
+                <h6>{{ prescription.patient.nid }}</h6>
+                <!-- <input type="text" class="form-control" placeholder="Gender"> -->
+              </div>
+              <label for="inputEmail4" class="col-form-label level-date">Date</label>
+              <div class="input col-lg-3 col-sm-3">
+                <h6>{{ prescription.date }}</h6>
+                <!-- <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control"> -->
+              </div>
+            </div>
+
+          </form>
+
+          <hr class="my-4">
+
+
+          <!--************* Patients Details Ends************ -->
+
+
+          <!--************* Prescription Left Side Starts ************ -->
+          <div class="row">
+            <div class="vertical-line col-lg-3 col-sm-5">
+              <label for="history">History</label>
+              <div class="history">
+                <p>{{ prescription.history }}</p>
+                <!-- <textarea class="history" name="message" rows="15" cols="30"></textarea> -->
+              </div>
+
+              <label for="complications">Complications</label>
+              <div class="history">
+                <p>{{ prescription.complication }}</p>
+                <!-- <textarea class="history" name="message" rows="15" cols="30"></textarea> -->
+              </div>
+
+              <label for="diagonosis">Diagonosis</label>
+              <div class="history">
+                <p>{{ prescription.diagnosis }}</p>
+                <!-- <textarea class="history" name="message" rows="15" cols="30"></textarea> -->
+              </div>
+
+
+            </div>
+
+            <!--************* Prescription Left Side Ends ************ -->
+
+
+            <!--************* Show Medicine Starts ************ -->
+
+            <div class="main col-lg-6 col-sm-5">
+              <h5>Rx,</h5>
+                {% for foo in dose %}
+              <h6 class="tab-name">{{ foo.medicine }}</h6>
+              <div class="row">
+                <div class="col-lg-6 col-sm-8">
+                  <pre><sup>{{ foo.var1 }}</sup> <sup>+</sup> <sup>{{ foo.var2 }}</sup> <sup>+</sup> <sup>{{ foo.var3 }}</sup></pre>
+                </div>
+                <div class="col-lg-6 col-sm-8">
+                  <pre><sup>{{ foo.schedule }}</sup></pre>
+                </div>
+                <div class="col-lg-6 col-sm-8">
+                  <pre><sup>{{ foo.var4 }}</sup> <sup>{{ foo.due }}</sup></pre>
+                </div>
+              </div>
+                {% endfor %}
+
+
+                            <!--************* Show Medicine Starts ************ -->
+
+              <!--************* Advise Note Starts ************ -->
+
+
+              <div class="notes">
+                <label for="diagonosis">Advise Notes</label>
+                <div class="advise-notes col-sm-12">
+                  <p>{{ prescription.advice }}</p>
+                  <!-- <textarea class="history" name="message" rows="15" cols="30"></textarea> -->
+                </div>
+              </div>
+
+                                     <!--************* Advise Note Ends ************ -->
+
+              <!--************* Follow-Up Starts ************ -->
+
+              <h6 class="follow">Follow Up</h6>
+              <div class="parent col-sm-12">
+                <div class="left">
+                  <span>After</span>
+                </div>
+
+              
+                <div class="col-lg-12 col-sm-15 right">
+                  <pre><sup>{{ prescription.due }}</sup> <sup>{{ prescription.dueLength }}</sup></pre>
+                </div>
+
+                <div class="right-text">
+                  <span>Contact With Me</span>
+                </div>
+
+
+              
+
+              <!--************* Follow-Up Ends ************ -->
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+  <script src="script.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput").value;
+      document.getElementById("demo").innerHTML = "Tab. " + x;
+    }
+  </script>
+  <script>
+    function myFunction1() {
+      var x = document.getElementById("myInput1").value;
+      document.getElementById("demo1").innerHTML = "Tab. " + x;
+    }
+  </script>
+  <script>
+    function myFunction2() {
+      var x = document.getElementById("myInput2").value;
+      document.getElementById("demo2").innerHTML = "Tab. " + x;
+    }
+  </script>
+
+</body>
+
+</html>
