@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/allPrescription.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+    <!--************* SideBar Starts************ -->
+
+    <div class="app-left">
+      <div class="app-logo">
+        <img src="./image/healthcard with logo.png" alt="Health Card" srcset="">
+
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorDashboard.html">
+            <i class="fas fa-columns"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorEditProfile.html">
+            <i class="fas fa-user"></i>          
+            Profile
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-procedures"></i>         
+             patients
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="far fa-calendar-check"></i>          
+            Appointments
+          </a>
+        </li>
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="./allPrescription.html">
+            <i class="fas fa-file-prescription"></i>         
+             Prescriptions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--************* SideBar Ends************ -->
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="./image/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Current Months Apoinments List Starts************ -->
+
+
+      <section id="current-apointments">
+
+        <div class="current-month">
+          <h3>This Month</h3>
+
+          <div class="row">
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+ 
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+   
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+                     <!--************* Current Months Apoinments List Ends************ -->
+
+
+
+                        <!--************* All Apoinments List Starts************ -->
+
+
+      <section id="all-apointments">
+
+        <div class="current-month">
+          <h3>All Prescriptions</h3>
+
+          <div class="row">
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+           
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+           
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+            
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+             
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="appointment-column col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <img src="./image/pro-img.png" alt="">
+            
+                </div>
+                <div class="card-body">
+                  <h6>Mr. Alex Morgue</h6>
+                  <h6>ID# <span>22334455</span></h6>
+                  <button> <a href="./patientsPrescription.html">
+                    <img src="./image/view.png" alt="">
+                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+
+                         <!--************* All Apoinments List Ends************ -->
+
+  </div>
+
+  </div>
+
+  <!--************* Main Part Ends************ -->
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    function myalert() {
+      alert(prompt("Please The Code "));
+    }
+  </script>
+</body>
+
+</html>

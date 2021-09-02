@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/patientsDashboard.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+    <!--************* SideBar Starts************ -->
+
+    <div class="app-left">
+      <div class="app-logo">
+        <img src="./image/healthcard with logo.png" alt="Health Card" srcset="">
+
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="./patientsDashboard.html">
+            <i class="fas fa-columns"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./patientsProfile.html">
+            <i class="fas fa-user"></i>
+            Profile
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./AllPatientsPrescription.html">
+            <i class="fas fa-procedures"></i>
+            My Prescription
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="far fa-calendar-check"></i>
+            Set Appointments
+          </a>
+        </li>
+        <li class="nav-list-item ">
+          <a class="nav-list-link" href="">
+            <i class="fas fa-file-prescription"></i>
+            Medication Reminder
+          </a>
+        </li>
+        <li class="nav-list-item ">
+          <a class="nav-list-link" href="">
+            <i class="fas fa-file-prescription"></i>
+            Emeregency
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--************* SideBar Ends************ -->
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="./image/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Current Medicine List Starts************ -->
+
+      <section id="current-apointments">
+     <!-- <div>
+        <h3> <i class="far fa-arrow-alt-circle-left"></i> Patients Profile</h3>
+      </div> -->
+
+      <div class="prescription-header">
+        <div class="new-prescription">
+          <h2>Dashboard</h2>
+        </div>
+      </div>
+
+        <div class="personal">
+
+          <h3>Current Medicine List</h3>
+
+          <div class="main">
+              <h6 class="tab-name">Tab. Rivarox 10 mg</h6>
+              <div class="row">
+                <div class="col-lg-3">
+                  <pre><sup>0</sup> <sup>+</sup> <sup>0</sup> <sup>+</sup> <sup>0</sup></pre>
+                </div>
+                <div class="col-lg-3">
+                  <pre><sup>After</sup> <sup>Dinner</sup></pre>
+                </div>
+                <div class="col-lg-3">
+                  <pre><sup>2</sup> <sup>Months</sup></pre>
+                </div>
+              </div>
+
+              <h6 class="tab-name">Tab. Rivarox 10 mg</h6>
+              <div class="row">
+                <div class="col-lg-3">
+                  <pre><sup>0</sup> <sup>+</sup> <sup>0</sup> <sup>+</sup> <sup>0</sup></pre>
+                </div>
+                <div class="col-lg-3">
+                  <pre><sup>After</sup> <sup>Dinner</sup></pre>
+                </div>
+                <div class="col-lg-3">
+                  <pre><sup>2</sup> <sup>Months</sup></pre>
+                </div>
+              </div>
+
+              <h6 class="tab-name">Tab. Rivarox 10 mg</h6>
+              <div class="row">
+                <div class="col-lg-3">
+                  <pre><sup>0</sup> <sup>+</sup> <sup>0</sup> <sup>+</sup> <sup>0</sup></pre>
+                </div>
+                <div class="col-lg-3">
+                  <pre><sup>After</sup> <sup>Dinner</sup></pre>
+                </div>
+                <div class="col-lg-3">
+                  <pre><sup>2</sup> <sup>Months</sup></pre>
+                </div>
+              </div>
+
+              </div>
+
+       
+        </div>
+      </section>
+
+
+                       <!--************* Current Medicine List Starts************ -->
+
+
+
+                         <!--************* Upcoming Appointments Starts************ -->
+
+
+      <section id="right-side">
+
+
+        <div class="upcoming-appointments">
+
+          <div class="chart-container-header">
+            <h3>Upcoming Appointments</h3>
+          </div>
+          <div>
+            <div class="time">
+              <h6><i class="fas fa-clock fa-lg"></i> 10.00 AM</h6>
+            </div>
+            <div class="date">
+              <h6>08/31/2021</h6>
+            </div>
+          </div>
+        </div>
+
+
+                            <!--************* Upcoming Appointments Ends************ -->
+
+
+                        <!--************* Current Prescription Starts************ -->
+
+
+        <div class="prescription-details">
+
+          <div class="chart-container-header">
+            <h3>Current Prescriptions</h3>
+          </div>
+          <a href="#">DR. ARNOLD DAVIES_02/05/20.pdf</a><br>
+          <a href="#">DR. ARNOLD DAVIES_02/05/20.pdf</a><br>
+        </div>
+
+
+
+                             <!--************* Current Prescription Ends************ -->
+
+
+                              <!--************* Blood Pressure Starts************ -->
+
+                         <div class="blood-pressure">
+
+                          <div class="chart-container-header">
+                            <h3>My Blood Pressure</h3>
+                          </div>
+                          <h5><img src="./image/bloodPressure.png" alt="" srcset="">  <span>121/81</span></h5>
+                          <p>Last Updated on 12:20pm 21/03/21</p>
+                        </div>
+
+                  
+                                <!--************* Blood Pressure Ends************ -->
+
+                                <!--************* Blood Sugar Starts************ -->
+                   
+
+                            <div class="blood-pressure">
+
+                              <div class="chart-container-header">
+                                <h3>My Random Blood Sugar</h3>
+                              </div >
+                              <div>
+                                <div class="fasted col-sm-5">
+                                <h6>Fasted</h6>
+                                  <h5>5.8 mmol/L</h5>
+                              </div>
+                             <div class="haf col-sm-5">
+                              <h6>2HAF </h6>
+                                <h5>6.3 mmol/L</h5> 
+                             </div>
+                            </div>
+                              <p>Last Updated on 12:20pm 21/03/21</p>
+                            </div>
+
+      </section>
+    </div>
+
+
+                          <!--************* Blood Sugar Ends************ -->
+
+  </div>
+
+  </div>
+
+  <!--************* Main Part Ends************ -->
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+
+</body>
+
+</html>

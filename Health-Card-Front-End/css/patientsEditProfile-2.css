@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --app-bg-dark: #FFFFFF;
+  --app-bg-left: #4B4F4F;
+  --app-bg-before: linear-gradient(180deg, rgba(1,8,31,0) 0%, rgba(1,8,31,1) 100%);
+  --app-bg-before-2: linear-gradient(0deg, rgba(1,8,31,0) 0%, rgba(1,8,31,1) 100%);
+  --app-bg-light: #E1E1E1;
+  --app-logo: #3d7eff;
+  --nav-link: #E1E1E1;
+  --nav-link-active: rgb(12, 11, 11);
+  --list-item-hover: #222224;
+  --main-color: #4B4F4F;
+  --secondary-color: #5e6a81;
+  --color-light: rgba(52, 129, 210, .2);
+  --warning-bg: #ffe5e5;
+  --warning-icon: #ff8181;
+  --applicant-bg: #e3fff1;
+  --applicant-icon: #61e1a1;
+  --close-bg: #fff8e5;
+  --close-icon: #fdbc64;
+  --draft-bg: #fed8b3;
+  --draft-icon: #e9780e;
+}
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #050e2d;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  max-width: 1680px;
+}
+
+.app-left {
+  flex-basis: 240px;
+  background-color: #4B4F4F;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 0;
+  transition: all 0.4s ease-in;
+}
+.app-left.show {
+  right: 0;
+  opacity: 1;
+}
+
+.app-main {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--app-bg-light);
+  padding: 24px;
+  margin-bottom: 20%;
+
+}
+
+
+.edit-button button{
+  border-width: 0;
+  background-color: var(--app-bg-light);
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+margin-bottom: 5%;
+background-color:inherit;
+  }
+
+.update-button button{
+  border-width: 0;
+  background-color: var(--app-bg-light);
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13%;
+  background-color:inherit;
+  }
+
+  .update-button-2 button{
+    border-width: 0;
+    background-color: var(--app-bg-light);
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    background-color:inherit;
+    }
+
+  .h3-tag{
+    float: left;
+  }
+
+.app-logo img{
+width: 80%;
+margin-left: 7%;
+margin-top: 20%;
+margin-bottom: 10%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navtop{
+  background-color: #4B4F4F !important;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+}
+.img-size{
+  height: 25px;
+  width: 35px;
+  border-radius: 100%;
+}
+.search{
+  color: #4b4b4b !important;
+  border-radius: 10px;
+  background-color: #4B4F4F;
+}
+
+.search-button{
+background-color: #4B4F4F;
+}
+
+.nav-list {
+  margin-top: 40px;
+}
+
+.nav-list-item {
+  margin-bottom: 12px;
+}
+.nav-list-item a{
+  text-decoration: none;
+}
+.nav-list-item:not(.active):hover {
+  background-color: #E1E1E1;
+   border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  color: var(--nav-link-active);
+}
+.nav-list-item.active .nav-list-link {
+  color: var(--nav-link-active);
+  background-color: #E1E1E1;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.nav-list-item.active .nav-list-link:after {
+  height: 100%;
+  opacity: 1;
+}
+.nav-list-item.active svg {
+  stroke: var(--app-logo);
+}
+
+.nav-list-link {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px 24px;
+  color: var(--nav-link);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-list-link svg {
+  margin-right: 12px;
+}
+.nav-list-link:after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: var(--app-logo);
+  right: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 2px;
+  opacity: 0;
+  height: 0;
+}
+ .nav-list-link i{
+  margin: 10%;
+}
+
+
+.personal{
+  height: 100%;
+  width: 60%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: var(--app-bg-dark);
+  padding: 0.5%;
+  align-items: center;
+  float: left;
+  margin-top: 1.5%;
+}
+
+.prescription-details{
+  margin-top: 1.5%;
+}
+
+.blood-pressure{
+  height: 100%;
+  width: 35%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: var(--app-bg-dark);
+  padding: 0.5%;
+ float: right;
+ padding: 2%;
+ margin-top: 1.5%;
+}
+.blood-pressure p{
+  float: right;
+}
+
+.input{
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.fasted{
+  float: left;
+}
+.haf{
+  float: right;
+}
+
+.prescription-details a{
+  line-height: 3;
+}
+
+.ongoing-medicine{
+  height: 100%;
+  width: 35%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: var(--app-bg-dark);
+  padding: 0.5%;
+ float: right;
+ padding: 2%;
+ margin-top: 3%;
+}
+
+.pro-pic{
+  height: 12.5rem;
+  width: 12.5rem;
+ border-radius: 50%;
+margin: auto;
+display: block;
+margin-top: 8%;
+}
+.personal h3{
+  margin-left: 38%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.complications sup{
+margin-top: 10%;
+}
+
+.details{
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
+
+.current-month h3{
+text-align: left;
+padding: 1%;
+color: #000;
+}
+
+#current-apointments{
+  border-radius: 10px;
+
+}
+.appointment-column{
+  padding: 2% 2%;
+
+}
+.card-header{
+  border-bottom:0;
+  
+}
+.card{
+  width: 70%;
+  background-color: #E1E1E1;
+  color: #000;
+  border-radius: 10px;
+}
+.card-body button{
+  padding-top: 10%;
+  border-width: 0;
+  background-color: var(--app-bg-light);
+  background-size: cover;
+}
+
+#all-apointments {
+  text-align: center;
+  margin-top: 4%;
+  border-radius: 10px;
+}
+
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.chart-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.chart-container-header h3 {
+  line-height: 1;
+  opacity: 0.8;
+  color: #000;
+}
+.chart-container-header span {
+  color: var(--app-logo);
+  font-size: 1rem;
+  margin-top: -3%;
+}
+.icon{
+color: var(--app-logo);
+}
+
+
+

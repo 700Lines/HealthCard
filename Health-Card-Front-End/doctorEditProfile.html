@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/doctorEditProfile.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+    <!--************* SideBar Starts************ -->
+
+    <div class="app-left">
+      <div class="app-logo">
+        <img src="./image/healthcard with logo.png" alt="Health Card" srcset="">
+
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorDashboard.html">
+            <i class="fas fa-columns"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="./doctorProfile.html">
+            <i class="fas fa-user"></i>
+            Profile
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorEditProfile.html">
+            <i class="fas fa-procedures"></i>
+            patients
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="far fa-calendar-check"></i>
+            Appointments
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./allPrescription.html">
+            <i class="fas fa-file-prescription"></i>
+            Prescriptions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--************* SideBar Ends************ -->
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="./image/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Doctor Details Starts************ -->
+
+
+      <div class="doctor-name">
+        <div class="row">
+          <h3 class=" col-lg-3 col-sm-4">Dr. John Doe</h3>
+          <p class="speciality col-lg-3 col-sm-3">Neuro Surgeon</p><br>
+          <p class="details col-lg-12">M.B.B.S. M.S. F.R.C.S. (Bakingham) F.R.C.S. (Glosgo) M.Ch (Neuro Surgeon)</p>
+        </div>
+      </div>
+
+      <section id="current-apointments">
+        <div class="current-month">
+          <div class="row">
+            <div class="appointment-column col-lg-2 col-sm-3">
+              <img src="" alt="">
+            </div>
+            <div class="col-lg-5 col-sm-7">
+              <div class="special-1">
+                <h5>Specialization</h5>
+                <select class="category" id="exampleFormControlSelect1">
+                  <option>Category</option>
+                  <option>After Breakfast</option>
+                  <option>Before Lunch</option>
+                  <option>After Lunch</option>
+                  <option>Before Dinner</option>
+                  <option>After Dinner</option>
+                </select><br>
+
+                <select class="category" id="exampleFormControlSelect1">
+                  <option>Sub Category</option>
+                  <option>After Breakfast</option>
+                  <option>Before Lunch</option>
+                  <option>After Lunch</option>
+                  <option>Before Dinner</option>
+                  <option>After Dinner</option>
+                </select>
+               
+              </div>
+              <div class="special-2">
+                <h5>Primary Consultation Location</h5>
+                <select class="category" id="exampleFormControlSelect1">
+                  <option>Consultaion Centre</option>
+                  <option>After Breakfast</option>
+                  <option>Before Lunch</option>
+                  <option>After Lunch</option>
+                  <option>Before Dinner</option>
+                  <option>After Dinner</option>
+                </select><br>
+
+                <select class="category" id="exampleFormControlSelect1">
+                  <option>Consultaion Location</option>
+                  <option>After Breakfast</option>
+                  <option>Before Lunch</option>
+                  <option>After Lunch</option>
+                  <option>Before Dinner</option>
+                  <option>After Dinner</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="notes">
+        <label for="notes">Quick Bio</label>
+        <div>
+          <textarea class="history col-sm-12" placeholder="Please Write Here..." name="message" rows="10" cols="60"></textarea>
+        </div>
+      </div>
+
+
+      <!--************* Doctor details Ends************ -->
+
+      
+      <!--************* Add Schedule Starts************ -->
+
+
+      <div class="main col-lg-6 col-sm-9">
+        <h6>My Weekly Schedule</h6>
+        <div class="wrapper">
+
+          <!-- Accordion Heading Three -->
+          <div class="parent-tab tab-3">
+            <input type="checkbox" name="tab" id="tab-3">
+            <label for="tab-3" class="tab-3">
+              <span>Add Schedule </span>
+              <div class="icon"><i class="fas fa-plus"></i></div>
+            </label>
+            <div class="content">
+
+              <div class="row">
+                <div class="col-lg-1 col-sm-9">
+                  <select class="" id="exampleFormControlSelect1">
+                    <option>Consultaion Centre</option>
+                    <option>Dhaka Medical College</option>
+                    <option>Anwar Khan Modern</option>
+                    <option>Popular Hospital</option>
+                    <option>Square Hospital</option>
+                    <option>Evercare Hospital</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-2">
+                  <select class="start-time" id="exampleFormControlSelect1">
+                    <option>Start Time</option>
+                    <option>01:00</option>
+                    <option>02:00</option>
+                    <option>03:00</option>
+                    <option>04:00</option>
+                    <option>05:00</option>
+                    <option>06:00</option>
+                    <option>07:00</option>
+                    <option>08:00</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                  </select>
+                </div>
+                   <div class="col-lg-1 col-sm-3">
+                  <select class="start-am" id="exampleFormControlSelect1">
+                    <option>A.M</option>
+                    <option>P.M</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="end-time" id="exampleFormControlSelect1">
+                    <option>End Time</option>
+                    <option>01:00</option>
+                    <option>02:00</option>
+                    <option>03:00</option>
+                    <option>04:00</option>
+                    <option>05:00</option>
+                    <option>06:00</option>
+                    <option>07:00</option>
+                    <option>08:00</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                  </select>
+                
+                    <select class="end-am" id="exampleFormControlSelect1">
+                      <option>A.M</option>
+                      <option>P.M</option>
+                    </select>
+                </div>
+
+              
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="add-days" id="exampleFormControlSelect1">
+                    <option>Add Days</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuessday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="add-days" id="exampleFormControlSelect1">
+                    <option>Add Days</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuessday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="add-days" id="exampleFormControlSelect1">
+                    <option>Add Days</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuessday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                  </select>
+                </div>
+
+              </div>
+              <br>
+
+              <!-- Sub Heading One -->
+              <div class="child-tab">
+                <input type="checkbox" name="sub-tab" id="tab-4">
+                <label for="tab-4">
+                  <span>Add More Schedule</span>
+                  <div class="icon"><i class="fas fa-plus"></i></div>
+                </label>
+                <div class="content">
+              
+                  <div class="row">
+                    <div class="col-lg-1 col-sm-9">
+                      <select class="" id="exampleFormControlSelect1">
+                        <option>Consultaion Centre</option>
+                        <option>Dhaka Medical College</option>
+                        <option>Anwar Khan Modern</option>
+                        <option>Popular Hospital</option>
+                        <option>Square Hospital</option>
+                        <option>Evercare Hospital</option>
+                      </select>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-2">
+                  <select class="start-time" id="exampleFormControlSelect1">
+                    <option>Start Time</option>
+                    <option>01:00</option>
+                    <option>02:00</option>
+                    <option>03:00</option>
+                    <option>04:00</option>
+                    <option>05:00</option>
+                    <option>06:00</option>
+                    <option>07:00</option>
+                    <option>08:00</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                  </select>
+                </div>
+                   <div class="col-lg-1 col-sm-3">
+                  <select class="start-am" id="exampleFormControlSelect1">
+                    <option>A.M</option>
+                    <option>P.M</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="end-time" id="exampleFormControlSelect1">
+                    <option>End Time</option>
+                    <option>01:00</option>
+                    <option>02:00</option>
+                    <option>03:00</option>
+                    <option>04:00</option>
+                    <option>05:00</option>
+                    <option>06:00</option>
+                    <option>07:00</option>
+                    <option>08:00</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                  </select>
+                
+                    <select class="end-am" id="exampleFormControlSelect1">
+                      <option>A.M</option>
+                      <option>P.M</option>
+                    </select>
+                </div>
+
+              
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="add-days" id="exampleFormControlSelect1">
+                    <option>Add Days</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuessday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="add-days" id="exampleFormControlSelect1">
+                    <option>Add Days</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuessday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                  </select>
+                </div>
+
+                <div class="col-lg-2 col-sm-3">
+                  <select class="add-days" id="exampleFormControlSelect1">
+                    <option>Add Days</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuessday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                  </select>
+                </div>
+
+                  </div>
+                </div>
+
+
+                <!-- Sub Heading Two -->
+                <div class="sub-child-tab">
+                  <input type="checkbox" name="sub-tab" id="tab-5">
+                  <label for="tab-5">
+                    <span>Add More Schedule</span>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                  </label>
+                  <div class="content">
+                    <div class="row">
+                      <div class="col-lg-1 col-sm-9">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>Consultaion Centre</option>
+                          <option>Dhaka Medical College</option>
+                          <option>Anwar Khan Modern</option>
+                          <option>Popular Hospital</option>
+                          <option>Square Hospital</option>
+                          <option>Evercare Hospital</option>
+                        </select>
+                      </div>
+  
+                      <div class="col-lg-2 col-sm-2">
+                    <select class="start-time" id="exampleFormControlSelect1">
+                      <option>Start Time</option>
+                      <option>01:00</option>
+                      <option>02:00</option>
+                      <option>03:00</option>
+                      <option>04:00</option>
+                      <option>05:00</option>
+                      <option>06:00</option>
+                      <option>07:00</option>
+                      <option>08:00</option>
+                      <option>09:00</option>
+                      <option>10:00</option>
+                      <option>11:00</option>
+                      <option>12:00</option>
+                    </select>
+                  </div>
+                     <div class="col-lg-1 col-sm-3">
+                    <select class="start-am" id="exampleFormControlSelect1">
+                      <option>A.M</option>
+                      <option>P.M</option>
+                    </select>
+                  </div>
+  
+                  <div class="col-lg-2 col-sm-3">
+                    <select class="end-time" id="exampleFormControlSelect1">
+                      <option>End Time</option>
+                      <option>01:00</option>
+                      <option>02:00</option>
+                      <option>03:00</option>
+                      <option>04:00</option>
+                      <option>05:00</option>
+                      <option>06:00</option>
+                      <option>07:00</option>
+                      <option>08:00</option>
+                      <option>09:00</option>
+                      <option>10:00</option>
+                      <option>11:00</option>
+                      <option>12:00</option>
+                    </select>
+                  
+                      <select class="end-am" id="exampleFormControlSelect1">
+                        <option>A.M</option>
+                        <option>P.M</option>
+                      </select>
+                  </div>
+  
+                
+  
+                  <div class="col-lg-2 col-sm-3">
+                    <select class="add-days" id="exampleFormControlSelect1">
+                      <option>Add Days</option>
+                      <option>Saturday</option>
+                      <option>Sunday</option>
+                      <option>Monday</option>
+                      <option>Tuessday</option>
+                      <option>Wednesday</option>
+                      <option>Thursday</option>
+                      <option>Friday</option>
+                    </select>
+                  </div>
+  
+                  <div class="col-lg-2 col-sm-3">
+                    <select class="add-days" id="exampleFormControlSelect1">
+                      <option>Add Days</option>
+                      <option>Saturday</option>
+                      <option>Sunday</option>
+                      <option>Monday</option>
+                      <option>Tuessday</option>
+                      <option>Wednesday</option>
+                      <option>Thursday</option>
+                      <option>Friday</option>
+                    </select>
+                  </div>
+  
+                  <div class="col-lg-2 col-sm-3">
+                    <select class="add-days" id="exampleFormControlSelect1">
+                      <option>Add Days</option>
+                      <option>Saturday</option>
+                      <option>Sunday</option>
+                      <option>Monday</option>
+                      <option>Tuessday</option>
+                      <option>Wednesday</option>
+                      <option>Thursday</option>
+                      <option>Friday</option>
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--************* Add Schedule Ends ************ -->
+
+      
+    </div>
+    
+
+  </div>
+  <div class="print-button">
+    <button><a href="./doctorProfile.html">
+        <img src="./image/save Button.png" alt="Submit Form">
+      </a>
+    </button>
+  </div>
+
+  <!--************* Main Part Ends************ -->
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+ 
+</body>
+
+</html>

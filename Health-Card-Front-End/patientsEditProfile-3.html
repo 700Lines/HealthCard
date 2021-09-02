@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/patientsEditProfile-3.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+    <!--************* SideBar Starts************ -->
+
+    <div class="app-left">
+      <div class="app-logo">
+        <img src="./image/healthcard with logo.png" alt="Health Card" srcset="">
+
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./patientsDashboard.html">
+            <i class="fas fa-columns"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="./patientsProfile.html">
+            <i class="fas fa-user"></i>
+            Profile
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./AllPatientsPrescription.html">
+            <i class="fas fa-procedures"></i>
+            My Prescription
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="far fa-calendar-check"></i>
+            Set Appointments
+          </a>
+        </li>
+        <li class="nav-list-item ">
+          <a class="nav-list-link" href="">
+            <i class="fas fa-file-prescription"></i>
+            Medication Reminder
+          </a>
+        </li>
+        <li class="nav-list-item ">
+          <a class="nav-list-link" href="">
+            <i class="fas fa-file-prescription"></i>
+            Emeregency
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--************* SideBar Ends************ -->
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="./image/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Patients Details Starts************ -->
+
+      <section id="current-apointments">
+
+      <div class="prescription-header">
+        <div class="new-prescription">
+          <h2><i class="far fa-arrow-alt-circle-left"></i> My Profile</h2>
+        </div>
+      </div>
+
+        <div class="personal">
+          <img class="pro-pic" src="./image/appointments.jpg" alt="" srcset="">
+          <h3>John Smith</h3>
+
+          <div class="row">
+            <div class="details col-lg-5 col-sm-5">
+              <h6>Age</h6>
+              <p>36</p>
+              <h6>Height</h6>
+              <pre><sup>5</sup><sup>'</sup> <sup>7</sup><sup>"</sup></pre>
+              <h6>Blood Group</h6>
+              <p>A+</p>
+              <h6>Home Address</h6>
+              <p>112 street, Dhaka.</p>
+              <h6>Email</h6>
+              <p>johnsmith@gmail.com</p>
+            </div>
+
+            <div class="sub-details col-lg-5 col-sm-5">
+              <h6>Date Of Birth</h6>
+              <p>08/31/2021</p>
+              <h6>Weight</h6>
+              <p>76 Kg</p>
+              <h6>Mobile</h6>
+              <p>01814673459</p>
+            </div>
+          </div>
+
+          <div class="edit-button">
+            <button><a href="./patientsEditProfile.html">
+              <img src="./image/edit profile.png" alt="Submit Form">
+            </a>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
+                           <!--************* Patients Details Ends************ -->
+
+
+
+                          <!--************* Blood Pressure Starts************ -->
+
+
+      <section id="righ-side">
+
+        <div class="blood-pressure">
+
+          <div class="chart-container-header">
+            <h3>My Blood Pressure</h3>
+          </div>
+          <h5><img src="./image/bloodPressure.png" alt="" srcset="">  <span>121/81</span></h5>
+          <p>Last Updated on 12:20pm 21/03/21</p>
+
+          <div class="update-button">
+            <button><a href="./patientsEditProfile-2.html">
+              <img src="./image/update.png" alt="Submit Form">
+              </a>
+            </button>
+          </div>
+        </div>
+
+
+
+                       <!--************* Blood Pressure Ends************ -->
+
+                         <!--************* Blood sugar Starts************ -->
+
+
+
+        <div class="blood-pressure">
+
+          <div class="chart-container-header">
+            <h3>My Random Blood Sugar</h3>
+          </div >
+          <div>
+          <div class="fasted"> 
+            <h6>Fasted</h6>
+         
+              <input type="number" class="form-control input" placeholder="Fasted">
+           
+          </div>
+         <div class="haf">
+          <h6>2HAF </h6>
+         
+            <input type="number" class="form-control input" placeholder="2HAF">
+        
+         </div>
+        </div>
+          <p>Last Updated on 12:20pm 21/03/21</p>
+          <div class="update-button-2">
+            <button><a href="./patientsProfile.html">
+              <img src="./image/save Button-2.png" alt="Submit Form">
+              </a>
+            </button>
+          </div>
+        </div>
+
+        
+
+                    <!--************* Blood sugar Ends************ -->
+
+ 
+
+      </section>
+    </div>
+
+
+  </div>
+
+  </div>
+
+  <!--************* Main Part Ends************ -->
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    function myalert() {
+      alert(prompt("Please The Code "));
+    }
+  </script>
+</body>
+
+</html>

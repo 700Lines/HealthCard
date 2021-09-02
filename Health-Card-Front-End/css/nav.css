@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 70px;
+    width: 1287px;
+    height: 70px;
+    background-color: #4B4F4F;
+    border-radius: 10px;
+    cursor:default;
+  }
+  
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 22px 40px;
+    text-decoration: none;
+  
+  }
+  
+  .nav:hover {
+    background-color: #ffd369;
+    color: black;
+  }
+  .nav{
+    float: right;
+    font-size: 20px;
+    font-family: Lobster;
+  
+  }
+  
+  .tutorhub{
+    font-family: Josefin Slab;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 26px;
+  
+  }
+  .right-nav{
+    margin-right: 125px;
+  }

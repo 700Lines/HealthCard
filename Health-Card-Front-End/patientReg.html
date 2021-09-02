@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Page</title>
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/nav.css">
+        <link rel="icon" href="../assets/img/favicon.ico">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+       <!-- navbar start-->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+        <a class ="navbar-brand" href="" >Health Card</a>
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="right-nav collapse navbar-collapse" id="navbarSupportedContent">
+  
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="">Home</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link"  href="">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="">Contsct Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Services</a>
+            </li>
+          </ul>
+          </div>
+      </nav>
+  
+  
+      <br><br><br><br>
+     <!-- navbar end -->
+   <!-- notify the user about successfull registration -->
+
+    <!-- registration form start -->
+
+    <div  align = "center">
+    <div class = "reg-form">
+      <div align = "center">
+      <img class = "image"src="./image/health card logo.png" alt="">
+    </div>
+      <h4 align="center">Nothing is more Important than your health</h4>
+
+    <div align= "center" class="tab">
+      <a href="patientReg.html"  class= "active">Patient</a>
+      <a href="doctorReg.html">Doctor</a>
+      <a href="pharmacyReg.html">Pharmacy</a>
+    </div>
+
+
+        <input type="hidden" name="role" value="patient">
+        <div class="input-holder" >
+          <div class="first">
+            <h5 >First Name</h5>
+          </div>
+          <div class = "first-name">
+          <input name="firstname" type="text"  id="fname">
+        </div>
+      
+        </div>
+
+       
+        <div align="center" class="input-holder">
+          <div class="last">
+          <h5 >Last Name</h5>
+        </div>
+          <div class = "last-name">
+          <input type="text" name="lastname"  id="lname">
+        </div>
+         
+        </div>
+
+        <div align = "center" class="input-holder">
+          <h5 class="placeholder">Email</h5>
+          <div class = "otherInfo">
+            <input name="email" type="email"  id="email">
+        </div>
+        
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Password</h5>
+          <div class = "otherInfo">
+            <input name="password" type="password"  id="password"> 
+          </div>
+         
+        </div>
+
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Confirm Password</h5>
+          <div class = "otherInfo"> 
+            <input name="conpassword" type="password"  id="password2">
+          </div>
+       
+        </div>
+
+
+        <div align="center"class="input-holder">
+          <h5 class="otherPlaceholder">Date Of Birth</h5>
+
+          <div class = "otherInfo"> 
+            <input name="dob" type="date"  value="" min="1900-01-01" max="2200-12-30" id="date">
+
+          </div>
+       
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Address</h5>
+
+          <div class = "otherInfo"> 
+            <input name="address" type="text"  id="address">
+          </div>
+        
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">Contact Number</h5>
+          <div class = "otherInfo"> 
+            <input name="contact"type="tel" id="contactNo">
+          </div>
+        
+        </div>
+
+        <div align="center" class="input-holder">
+          <h5 class="otherPlaceholder">NID</h5>
+          <div class = "otherInfo"> 
+            <input name="number"type="Number" id="nid">
+          </div>
+        
+        </div>
+
+        <div align="center" class="input-holder">
+          <input id="terms" class="terms" type="checkbox" >I have read and agree to the Terms and Conditions and Privacy Policy
+         
+         </div>
+
+        <div align="center" class="input-holder">
+          <input class="button" type="submit" value="Sign Up" >
+        </div>
+
+        <div align = "center">
+          <a class="dont" href="login.html">Already have an account? SignIn</a>
+         </div>
+
+          <br><br>
+      </form>
+    </div>
+
+  </body>
+</html>

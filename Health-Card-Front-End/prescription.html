@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/prescription.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+    <!--************* SideBar Starts************ -->
+
+    <div class="app-left">
+      <div class="app-logo">
+        <img src="./image/healthcard with logo.png" alt="Health Card" srcset="">
+
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorDashboard.html">
+            <i class="fas fa-columns"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorEditProfile.html">
+            <i class="fas fa-user"></i>          
+            Profile
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-procedures"></i>         
+             patients
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="far fa-calendar-check"></i>          
+            Appointments
+          </a>
+        </li>
+        <li class="nav-list-item ">
+          <a class="nav-list-link" href="./allPrescription.html">
+            <i class="fas fa-file-prescription"></i>         
+             Prescriptions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--************* SideBar Ends************ -->
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="./image/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Patients Details Starts************ -->
+      <div class="prescription-header">
+        <div class="new-prescription">
+          <h2><i class="far fa-arrow-alt-circle-left"></i> New Prescription</h2>
+        </div>
+        <div class="print-button">
+          <button>
+            <img src="./image/print-button.png" alt="Submit Form">
+          </button>
+        </div>
+        <div class="done-button">
+          <button><a href="./patientsPrescription.html">
+            <img src="./image/done-button.png" alt="Submit Form">
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="full-form">
+        <div class="jumbotron">
+          <div class="headline">
+            <img src="./image/health-card_prescription.png" alt="" srcset="">
+            <div class="doctor-details">
+              <h6 class="display-4">Dr.John Doe</h6>
+              <p class="lead">M.B.B.S M.S.</p>
+              <p class="lead">F.R.C.S. (Bakingham)</p>
+              <p class="lead">F.R.C.S. (Glosgo)</p>
+              <p class="lead">M.ch (Neuro Sergeon)</p>
+            </div>
+          </div>
+          <hr class="my-4">
+          <form>
+
+            <div class="form-group row">
+              <label for="inputEmail4" class="col-form-label">Name</label>
+              <div class="col-lg-3 col-sm-3">
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+              <label for="exampleFormControlSelect1" class="col-form-label">Gender</label>
+              <div class="col-lg-3 col-sm-3">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <label for="inputEmail4" class="col-form-label">Phone</label>
+              <div class="col-lg-3 col-sm-3">
+                <input type="text" class="form-control" placeholder="Gender">
+              </div>
+            </div>
+
+            <br>
+            <div class="form-group row">
+              <label for="inputEmail4" class=" col-form-label level-age">Age</label>
+              <div class="col-lg-3 col-sm-3">
+                <input type="text" class="form-control" placeholder="Age">
+              </div>
+              <label for="inputEmail4" class="col-form-label level-id">Id</label>
+              <div class="col-lg-3 col-sm-3">
+                <input type="text" class="form-control" placeholder="Gender">
+              </div>
+              <label for="inputEmail4" class="col-form-label level-date">Date</label>
+              <div class="col-lg-3 col-sm-3">
+                <input type="date" name="bday" max="3000-12-31" min="1000-01-01" class="form-control">
+              </div>
+            </div>
+
+          </form>
+
+          <hr class="my-4">
+
+
+          <!--************* Patients Details Ends************ -->
+
+
+          <!--************* Prescription Left Side Starts ************ -->
+          <div class="row">
+            <div class="vertical-line col-lg-3 col-sm-5">
+              <label for="history">History</label>
+              <div>
+                <textarea class="history" name="message" rows="15" cols="30"></textarea>
+              </div>
+
+              <label for="complications">Complications</label>
+              <div>
+                <textarea class="history" name="message" rows="15" cols="30"></textarea>
+              </div>
+
+              <label for="diagonosis">Diagonosis</label>
+              <div>
+                <textarea class="history" name="message" rows="15" cols="30"></textarea>
+              </div>
+
+
+            </div>
+
+            <!--************* Prescription Left Side Ends ************ -->
+
+
+            <!--************* Add Medicine Starts ************ -->
+
+            <div class="main col-lg-6 col-sm-5">
+              <h6>Rx,</h6>
+              <div class="wrapper">
+
+                <!-- Accordion Heading Three -->
+                <div class="parent-tab tab-3">
+                  <input type="checkbox" name="tab" id="tab-3">
+                  <label for="tab-3" class="tab-3">
+                    <span>Add Medicine </span>
+                    <div class="icon"><i class="fas fa-plus"></i></div>
+                  </label>
+                  <div class="content">
+
+                    <!-- <input type="text" class="form-control" placeholder="Name of Medicine"> -->
+                    <input type="text" class="form-control medicien-name" placeholder="Name of Medicine" id="myInput"
+                      oninput="myFunction()">
+                    <h6 id="demo"></h6>
+                    <div class="row">
+                      <div class="col-lg-2 col-sm-3">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>0</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-sm-3">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>0</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-sm-3">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>0</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+
+                      <div class="col-lg-3 col-sm-3">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>Before Breakfast</option>
+                          <option>After Breakfast</option>
+                          <option>Before Lunch</option>
+                          <option>After Lunch</option>
+                          <option>Before Dinner</option>
+                          <option>After Dinner</option>
+                        </select>
+                      </div>
+
+                      <div class="col-lg-2 col-sm-3">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+
+
+                        </select>
+                      </div>
+
+                      <div class="col-lg-3 col-sm-3">
+                        <select class="" id="exampleFormControlSelect1">
+                          <option>Days</option>
+                          <option>Months</option>
+                          <option>Years</option>
+
+                        </select>
+                      </div>
+
+                    </div>
+                    <br>
+
+                    <!-- Sub Heading One -->
+                    <div class="child-tab">
+                      <input type="checkbox" name="sub-tab" id="tab-4">
+                      <label for="tab-4">
+                        <span>Add More Medicine</span>
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                      </label>
+                      <div class="content">
+                        <input type="text" class="form-control medicine-name" placeholder="Name of Medicine"
+                          id="myInput1" oninput="myFunction1()">
+                        <h6 id="demo1"></h6>
+                        <!-- <h6>1.Tab. Rivarox 10 mg</h6> -->
+                        <div class="row">
+                          <div class="col-lg-2 col-sm-3">
+                            <select class="" id="exampleFormControlSelect1">
+                              <option>0</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="col-lg-2 col-sm-3">
+                            <select class="" id="exampleFormControlSelect1">
+                              <option>0</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="col-lg-2 col-sm-3">
+                            <select class="" id="exampleFormControlSelect1">
+                              <option>0</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+
+                          <div class="col-lg-3 col-sm-3">
+                            <select class="" id="exampleFormControlSelect1">
+                              <option>Before Breakfast</option>
+                              <option>After Breakfast</option>
+                              <option>Before Lunch</option>
+                              <option>After Lunch</option>
+                              <option>Before Dinner</option>
+                              <option>After Dinner</option>
+                            </select>
+                          </div>
+
+                          <div class="col-lg-2 col-sm-3">
+                            <select class="" id="exampleFormControlSelect1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                              <option>21</option>
+                              <option>22</option>
+                              <option>23</option>
+                              <option>24</option>
+                              <option>25</option>
+                              <option>26</option>
+                              <option>27</option>
+                              <option>28</option>
+                              <option>29</option>
+                              <option>30</option>
+                              <option>31</option>
+
+
+                            </select>
+                          </div>
+
+                          <div class="col-lg-3 col-sm-3">
+                            <select class="" id="exampleFormControlSelect1">
+                              <option>Days</option>
+                              <option>Months</option>
+                              <option>Years</option>
+
+                            </select>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+
+                      <!-- Sub Heading Two -->
+                      <div class="sub-child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-5">
+                        <label for="tab-5">
+                          <span>Add More Medicine</span>
+                          <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="content">
+                          <input type="text" class="form-control medicine-name" placeholder="Name of Medicine"
+                            id="myInput2" oninput="myFunction2()">
+                          <h6 id="demo2"></h6>
+                          <!-- <h6>1.Tab. Rivarox 10 mg</h6> -->
+                          <div class="row">
+                            <div class="col-lg-2 col-sm-3">
+                              <select class="" id="exampleFormControlSelect1">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+                            <div class="col-lg-2 col-sm-3">
+                              <select class="" id="exampleFormControlSelect1">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+                            <div class="col-lg-2 col-sm-3">
+                              <select class="" id="exampleFormControlSelect1">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3">
+                              <select class="" id="exampleFormControlSelect1">
+                                <option>Before Breakfast</option>
+                                <option>After Breakfast</option>
+                                <option>Before Lunch</option>
+                                <option>After Lunch</option>
+                                <option>Before Dinner</option>
+                                <option>After Dinner</option>
+                              </select>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-3">
+                              <select class="" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+
+
+                              </select>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3">
+                              <select class="" id="exampleFormControlSelect1">
+                                <option>Days</option>
+                                <option>Months</option>
+                                <option>Years</option>
+
+                              </select>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--************* Add Medicine Ends ************ -->
+
+
+              <!--************* Advise Note Starts ************ -->
+
+
+              <div class="notes">
+                <label for="notes">Advise Notes</label>
+                <div>
+                  <textarea class="history col-sm-12" name="message" rows="15" cols="60"></textarea>
+                </div>
+              </div>
+
+              <!--************* Advise Note Ends ************ -->
+
+              <!--************* Follow-Up Starts ************ -->
+
+              <h6>Follow Up</h6>
+              <div class="parent col-sm-12">
+                <div class="left">
+                  <span>After</span>
+                </div>
+
+                <div class="col-lg-2 col-sm-3 right">
+                  <select class="" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+
+
+                  </select>
+                </div>
+
+                <div class="col-lg-3 col-sm-3 right-right">
+                  <select class="" id="exampleFormControlSelect1">
+                    <option>Days</option>
+                    <option>Months</option>
+                    <option>Years</option>
+
+                  </select>
+                </div>
+
+                <div class="right-text">
+                  <span>Days Contact With Me</span>
+                </div>
+
+              </div>
+
+                             <!--************* Follow-Up Ends ************ -->
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput").value;
+      document.getElementById("demo").innerHTML = "Tab. " + x;
+    }
+  </script>
+  <script>
+    function myFunction1() {
+      var x = document.getElementById("myInput1").value;
+      document.getElementById("demo1").innerHTML = "Tab. " + x;
+    }
+  </script>
+  <script>
+    function myFunction2() {
+      var x = document.getElementById("myInput2").value;
+      document.getElementById("demo2").innerHTML = "Tab. " + x;
+    }
+  </script>
+
+</body>
+
+</html>

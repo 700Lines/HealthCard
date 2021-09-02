@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/6a7194b6d1.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/doctorProfile.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="app-container">
+
+    <!--************* SideBar Starts************ -->
+
+    <div class="app-left">
+      <div class="app-logo">
+        <img src="./image/healthcard with logo.png" alt="Health Card" srcset="">
+
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./doctorDashboard.html">
+            <i class="fas fa-columns"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="./doctorEditProfile.html">
+            <i class="fas fa-user"></i>
+            Profile
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-procedures"></i>
+            patients
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="far fa-calendar-check"></i>
+            Appointments
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./allPrescription.html">
+            <i class="fas fa-file-prescription"></i>
+            Prescriptions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--************* SideBar Ends************ -->
+
+    <!--************* Main Part Starts************ -->
+
+
+    <div class="app-main">
+
+      <!--************* NavBar Starts************ -->
+
+      <nav class="navtop navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline">
+          <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 search-button" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-briefcase-medical"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="far fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="./image/user.jpg" class="img-size" alt="..."></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--************* NavBar Ends************ -->
+
+      <!--************* Speciality Details Starts************ -->
+
+
+      <div class="doctor-name">
+        <div class="row">
+          <h3 class=" col-lg-3 col-sm-4">Dr. John Doe</h3>
+          <p class="speciality col-lg-3 col-sm-3">Neuro Surgeon</p><br>
+          <p class="details col-lg-12">M.B.B.S. M.S. F.R.C.S. (Bakingham) F.R.C.S. (Glosgo) M.Ch (Neuro Surgeon)</p>
+        </div>
+      </div>
+
+      <section id="current-apointments">
+        <div class="current-month">
+          <div class="row">
+            <div class="appointment-column col-lg-2 col-sm-3">
+              <img src="" alt="">
+            </div>
+            <div class="col-lg-5 col-sm-7">
+              <div class="special-1">
+                <h5>Specialization</h5>
+                <h6>Spinal NeuroSurgery Specialist</h6>
+                <h6>Thoracic spine </h6>
+              </div>
+              <div class="special-2">
+                <h5>Primary Consultation Location</h5>
+                <h6>Dhaka Medical Hospital</h6>
+                <h6>Bakshibazar, Dhaka </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="bio ">
+        <div class="row">
+          <h4 class="col-lg-12 col-sm-15">Quick Bio</h4>
+          <p class="col-lg-12 col-sm-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam faucibus eu nunc
+            semper ultrices ante maecenas
+            libero elementum. Nisl quis morbi enim ut. Urna etiam ut tristique mattis. Facilisis dictum eget mauris
+            purus.
+          </p>
+          <p class="full-bio col-lg-2 col-sm-3">Show Full Bio</p><br>
+        </div>
+      </div>
+
+
+      <!--************* Current Months Apoinments List Ends************ -->
+
+      <!--************* Schedule List Starts************ -->
+
+
+
+      <section id="schedule">
+        <h4>My Weekly Schedule</h4>
+        <div class="current-month">
+          <div class="row">
+            <div class="schedule-1 col-lg-12">
+              <h5>Dhaka Medical College</h5>
+              <div class="row">
+                <div class="col-lg-12 col-sm-7">
+                <pre class=""><sup>09:00</sup> <sup>P.M</sup> <sup>-</sup> <sup>03:00</sup> <sup>A.M</sup></pre>
+                </div>
+          
+                <div class="col-lg-8 col-sm-8">
+                <p class="day-1 ">Monday</p>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                <p class="day-2 ">Tuesday</p>
+                </div>
+           
+            </div>
+            
+            <div class="schedule-2 col-lg-12">
+              <h5>Dhaka Medical College</h5>
+              <div class="row">
+                <div class="col-lg-12 col-sm-8">
+                <pre class=""><sup>09:00</sup> <sup>P.M</sup> <sup>-</sup> <sup>03:00</sup> <sup>A.M</sup></pre>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                <p class="day-1 ">Monday</p>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                <p class="day-2 ">Tuesday</p>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                  <p class="day-3 ">Tuesday</p>
+                  </div>
+            </div>
+
+
+            <div class="schedule-3 col-lg-12">
+              <h5>Dhaka Medical College</h5>
+              <div class="row">
+                <div class="col-lg-12 col-sm-8">
+                <pre class=""><sup>09:00</sup> <sup>P.M</sup> <sup>-</sup> <sup>03:00</sup> <sup>A.M</sup></pre>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                <p class="day-1 ">Monday</p>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                <p class="day-2 ">Tuesday</p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--************* Schedule List Starts************ -->
+
+    </div>
+
+  </div>
+
+  <!--************* Main Part Ends************ -->
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    function myalert() {
+      alert(prompt("Please The Code "));
+    }
+  </script>
+</body>
+
+</html>
